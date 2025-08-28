@@ -1,167 +1,88 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Detten’s KFZ-Aufbereitung</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0a0a0a;
-      color: #f2f2f2;
-      animation: fadeIn 1.5s ease-in;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #fff;
+      color: #111;
     }
     header {
-      background: linear-gradient(to right, #000000, #001f3f);
-      padding: 40px 20px 30px;
+      background: black;
+      color: gold;
+      padding: 40px 20px;
       text-align: center;
     }
-    .logo {
-      font-size: 2.4em;
-      color: #00aaff;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-    header p {
-      color: #ccc;
-      font-size: 1.2em;
+    h1 { margin: 0; font-size: 2em; }
+    h2 {
+      color: black;
+      border-bottom: 2px solid gold;
+      padding-bottom: 5px;
     }
     section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
+      padding: 30px 20px;
     }
-    h2 {
-      color: #00aaff;
-      font-size: 2em;
-      border-bottom: 2px solid #00aaff;
-      padding-bottom: 10px;
-    }
-    .paket {
-      background-color: #111;
-      border-left: 5px solid #00aaff;
-      padding: 20px;
-      margin: 30px 0;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    }
-    .paket h3 {
-      margin-top: 0;
-      color: #FFD700;
-    }
-    .paket ul {
-      padding-left: 20px;
-      margin: 10px 0;
-    }
-    .paket li {
-      margin-bottom: 6px;
-    }
-    .preis {
-      font-weight: bold;
-      margin-top: 10px;
-      color: #00ccff;
+    .paket, .zusatz {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      padding: 15px;
+      background: #fdfdfd;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
     .btn {
       display: inline-block;
-      margin-top: 15px;
-      background-color: #25D366;
-      color: white;
-      padding: 12px 20px;
+      background: gold;
+      color: black;
+      padding: 10px 20px;
       text-decoration: none;
       font-weight: bold;
       border-radius: 6px;
     }
-    .btn:hover {
-      background-color: #1ebe5d;
-    }
-    .extra {
-      background: #101010;
-      padding: 30px;
-      margin-top: 40px;
-      border-radius: 8px;
-      box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 20px;
-    }
-    .gallery img {
-      width: 300px;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.4);
-    }
-    .reviews {
-      background-color: #121212;
-      border-left: 5px solid #00aaff;
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 8px;
-    }
-    .reviews p {
-      font-style: italic;
-      color: #ccc;
-    }
     footer {
-      background-color: #000;
+      background: #111;
+      color: white;
       text-align: center;
-      color: #888;
       padding: 20px;
       font-size: 0.9em;
     }
     .whatsapp-float {
       position: fixed;
-      width: 60px;
-      height: 60px;
       bottom: 20px;
       right: 20px;
-      background-color: #25D366;
-      color: #fff;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 30px;
-      box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-      z-index: 1000;
-    }
-    .whatsapp-float a {
+      background-color: #25d366;
       color: white;
+      border-radius: 50px;
+      padding: 12px 20px;
       text-decoration: none;
-      display: block;
-      line-height: 60px;
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 999;
     }
   </style>
 </head>
 <body>
 
-<div class="whatsapp-float">
-  <a href="https://wa.me/4917641557370" target="_blank" title="Jetzt via WhatsApp schreiben">💬</a>
-</div>
-
 <header>
-  <div class="logo">Detten’s KFZ-Aufbereitung</div>
-  <p>Dein Auto, Dein Glanz – Sportlich. Edel. Perfekt gepflegt.</p>
+  <h1>Detten’s KFZ-Aufbereitung</h1>
+  <p>Dein Auto. Dein Glanz.</p>
 </header>
 
-<section>
+<section id="ueberuns">
   <h2>Über uns</h2>
-  <p>Wir bei Detten’s KFZ-Aufbereitung haben uns auf die professionelle Pflege und Aufbereitung von Fahrzeugen spezialisiert.
-  Unser Ziel ist es, jedem Fahrzeug seinen Glanz zurückzugeben – egal ob für den Alltag, den Verkauf oder die Leasing-Rückgabe.
-  Mit Erfahrung, Leidenschaft und dem Blick fürs Detail garantieren wir ein Ergebnis, das begeistert.</p>
+  <p>Wir stehen für Qualität, Zuverlässigkeit und Leidenschaft in der Fahrzeugpflege. Unser Ziel ist es, jedes Fahrzeug wieder zum Glänzen zu bringen – als wäre es neu.</p>
 </section>
 
-<section>
-  <h2>Unsere Pflegepakete</h2>
+<section id="pakete">
+  <h2>Unsere Pakete</h2>
 
   <div class="paket">
     <h3>🔹 Paket 1 – Basic Clean</h3>
-    <p>Für leicht verschmutzte Fahrzeuge.</p>
+    <p><strong>Für leicht verschmutzte Fahrzeuge.</strong></p>
     <ul>
       <li>✅ Gründliches Aussaugen</li>
       <li>✅ Fußmattenreinigung</li>
@@ -169,102 +90,123 @@
       <li>✅ Scheibenreinigung innen</li>
       <li>✅ Innenraumduft</li>
     </ul>
-    <p class="preis">ab 69 € (je nach Fahrzeuggröße)</p>
-    <a class="btn" href="https://wa.me/4917641557370?text=Ich%20möchte%20Paket%201%20(Basic%20Clean)%20buchen.">Jetzt Termin buchen</a>
+    <p><strong>Preis:</strong> ab 69 € (je nach Fahrzeuggröße)</p>
+    <a href="https://wa.me/4917641557370" class="btn">Jetzt Termin buchen</a>
   </div>
 
   <div class="paket">
     <h3>🔹 Paket 2 – Premium Innenpflege</h3>
-    <p>Für normale bis mittlere Verschmutzung.</p>
+    <p><strong>Für normale bis mittlere Verschmutzung.</strong></p>
     <ul>
       <li>✅ Alles aus Paket 1</li>
-      <li>• Tornador-Reinigung (Ecken, Lüftung)</li>
-      <li>• Nassreinigung der Sitze (Stoff oder Leder)</li>
-      <li>• Pflege aller Kunststoffflächen</li>
+      <li>✅ Tornador-Reinigung (Ecken, Lüftung)</li>
+      <li>✅ Nassreinigung der Sitze (Stoff oder Leder)</li>
+      <li>✅ Pflege aller Kunststoffflächen</li>
     </ul>
-    <p class="preis">ab 99 €</p>
-    <a class="btn" href="https://wa.me/4917641557370?text=Ich%20möchte%20Paket%202%20(Premium%20Innenpflege)%20buchen.">Jetzt Termin buchen</a>
-  </div>
+    <p><strong>Preis:</strong> ab 99 €</p>
+    <a href="https://wa.me/4917641557370" class="btn">Jetzt Termin buchen</a>
+  </div> <div class="paket">
+    <h3>🔹 Paket 2 – Premium Innenpflege</h3>
+    <p><strong>Für normale bis mittlere Verschmutzung.</strong></p>
+    <ul>
+        <li>✅ Alles aus Paket 1</li>
+        <li>✅ Tornador-Reinigung (Ecken, Lüftung)</li>
+        <li>✅ Nassreinigung der Sitze (Stoff oder Leder)</li>
+        <li>✅ Pflege aller Kunststoffflächen</li>
+    </ul>
+    <p><strong>Preis:</strong><br>ab 99 €</p>
+    <a href="https://wa.me/4917641557370" class="btn">Jetzt Termin buchen</a>
+</div>
 
-  <div class="paket">
+<div class="paket">
     <h3>🔹 Paket 3 – Komplettaufbereitung</h3>
-    <p>Für starke Verschmutzungen oder zur Fahrzeugaufwertung (z. B. Verkauf, Leasingrückgabe).</p>
+    <p><strong>Für starke Verschmutzungen oder zur Fahrzeugaufwertung (z. B. Verkauf, Leasingrückgabe).</strong></p>
     <ul>
-      <li>✅ Alles aus Paket 2</li>
-      <li>• Geruchsneutralisation</li>
-      <li>• Kofferraumreinigung</li>
-      <li>• Türverkleidungen und Fußraum intensiv</li>
-      <li>• Alcantara/Lederpflege je nach Bedarf</li>
+        <li>✅ Alles aus Paket 2</li>
+        <li>✅ Geruchsneutralisation</li>
+        <li>✅ Kofferraumreinigung</li>
+        <li>✅ Türverkleidungen und Fußraum intensiv</li>
+        <li>✅ Alcantara/Lederpflege je nach Bedarf</li>
     </ul>
-    <p class="preis">ab 149 €</p>
-    <a class="btn" href="https://wa.me/4917641557370?text=Ich%20möchte%20Paket%203%20(Komplettaufbereitung)%20buchen.">Jetzt Termin buchen</a>
-  </div>
+    <p><strong>Preis:</strong><br>ab 149 €</p>
+    <a href="https://wa.me/4917641557370" class="btn">Jetzt Termin buchen</a>
+</div>
 
-  <div class="paket">
+<div class="paket">
     <h3>🔹 Paket 4 – Komplett & Politur</h3>
-    <p>Das Rundum-sorglos-Paket für den perfekten Glanz.</p>
+    <p><strong>Das Rundum-sorglos-Paket für den perfekten Glanz.</strong></p>
     <ul>
-      <li>✅ Alles aus Paket 3</li>
-      <li>• Außenreinigung</li>
-      <li>• Maschinelle Lackpolitur</li>
-      <li>• Lackpflege + Glanzversiegelung</li>
+        <li>✅ Alles aus Paket 3</li>
+        <li>✅ Außenreinigung</li>
+        <li>✅ Maschinelle Lackpolitur</li>
+        <li>✅ Lackpflege + Glanzversiegelung</li>
     </ul>
-    <p class="preis">ab 199 €</p>
-    <a class="btn" href="https://wa.me/4917641557370?text=Ich%20möchte%20Paket%204%20(Komplett%20+%20Politur)%20buchen.">Jetzt Termin buchen</a>
+    <p><strong>Preis:</strong><br>ab 199 €</p>
+    <a href="https://wa.me/4917641557370" class="btn">Jetzt Termin buchen</a>
+</div>
+</section>
+
+<section id="zusatz">
+  <h2>Zusatzleistungen</h2>
+
+  <div class="zusatzleistung">
+    <h4>🔸 Außenwäsche</h4>
+    <p>✅ Schonende Handwäsche inklusive Felgenreinigung<br><strong>29 €</strong></p>
+  </div>
+
+  <div class="zusatzleistung">
+    <h4>🔸 Polstersitzreinigung</h4>
+    <p>✅ Pro Sitz gründlich gereinigt und gepflegt<br><strong>10 € pro Sitz</strong></p>
+  </div>
+
+  <div class="zusatzleistung">
+    <h4>🔸 Lederreinigung</h4>
+    <p>✅ Sanfte Reinigung und Pflege für Lederflächen<br><strong>15 €</strong></p>
   </div>
 </section>
 
-<section class="extra">
-  <h2>Warum wir?</h2>
-  <ul>
-    <li>✨ Persönlicher Service & ehrliche Beratung</li>
-    <li>🔧 Profi-Ausrüstung & hochwertige Reinigungsmittel</li>
-    <li>📍 Zentrale Lage in Emsdetten</li>
-    <li>💬 Schnelle Terminvereinbarung via WhatsApp</li>
-  </ul>
+<section id="kontakt">
+  <h2>Kontakt für Privat- & Geschäftskunden</h2>
+  <p>📞 WhatsApp: <a href="https://wa.me/4917641557370">+49 176 41557370</a></p>
+  <p>📧 E-Mail:   dettenskfzaufbereitung@gmail.com</p>
+  <p>📍 Kuhlmannstraße 13, 48282 Emsdetten</p>
 </section>
 
-<section>
-  <h2>Galerie</h2>
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1617806113445-e73f9dcd0c4e?auto=format&fit=crop&w=600&q=80" alt="Auto Politur">
-    <img src="https://images.unsplash.com/photo-1622473592337-9a04f6b7de57?auto=format&fit=crop&w=600&q=80" alt="Innenreinigung">
-    <img src="https://images.unsplash.com/photo-1607006344307-83c34f4d377c?auto=format&fit=crop&w=600&q=80" alt="Felgenreinigung">
-  </div>
-</section>
-
-<section>
-  <h2>Kundenmeinungen</h2>
-  <div class="reviews">
-    <p>„Top Arbeit! Mein Auto sieht aus wie neu. Klare Empfehlung.“ – Sarah L.</p>
-  </div>
-  <div class="reviews">
-    <p>„Sehr freundlicher Service, schnelle Terminvergabe und top Ergebnis. Gerne wieder.“ – Mehmet A.</p>
-  </div>
-  <div class="reviews">
-    <p>„Super saubere Politur, mein Leasingrückläufer wurde anstandslos abgegeben.“ – Jonas K.</p>
-  </div>
-</section>
-
-<section>
-  <h2>Standort</h2>
-  <p>📍 <a href="https://www.google.com/maps/place/Kuhlmannstraße+13,+48282+Emsdetten" target="_blank">Kuhlmannstraße 13, 48282 Emsdetten (bei Google Maps ansehen)</a></p>
-</section>
-
-<section>
+<section id="impressum">
   <h2>Impressum</h2>
-  <p><strong>Detten’s KFZ-Aufbereitung</strong><br>
-  Inhaber: Abdurrahman Akay<br>
+  <p>Inhaber: Abdurrahman Akay<br>
+  Detten’s KFZ-Aufbereitung<br>
   Kuhlmannstraße 13<br>
   48282 Emsdetten<br>
-  Telefon: 0176 41557370<br>
-  E-Mail: dettenskfzaufbereitung@gmail.com<br>
-  USt-ID: DE311/5001/7538 </p>
+  dettenskfzaufbereitung@gmail.com<br>
+  Steuernummer:311/5001/7538</p>
+  <p>Öffnungszeiten:<br>
+  Montag–Freitag: 10:00–18:00<br>
+  Samstag: 09:00–14:00<br>
+  Sonntag: Geschlossen</p>
 </section>
 
 <footer>
-  © 2025 Detten’s KFZ-Aufbereitung – Alle Rechte vorbehalten
+  <p>&copy; 2025 Detten’s KFZ-Aufbereitung – Alle Rechte vorbehalten.</p>
 </footer>
+
+<style>
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50px;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+</style>
+
+<a href="https://wa.me/4917641557370" class="whatsapp-float">📱 Jetzt per WhatsApp buchen</a>
 
 </body>
 </html>
