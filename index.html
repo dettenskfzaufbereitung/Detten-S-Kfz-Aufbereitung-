@@ -1,194 +1,71 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Detten’s KFZ-Aufbereitung</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #fff;
-      color: #111;
-    }
-    header {
-      background: black;
-      color: gold;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    h1 { margin: 0; font-size: 2em; }
-    h2 {
-      color: black;
-      border-bottom: 2px solid gold;
-      padding-bottom: 5px;
-    }
-    section {
-      padding: 30px 20px;
-    }
-    .paket, .zusatz {
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      padding: 15px;
-      background: #fdfdfd;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-    .btn {
-      display: inline-block;
-      background: gold;
-      color: black;
-      padding: 10px 20px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px;
-    }
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-    }
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      color: white;
-      border-radius: 50px;
-      padding: 12px 20px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      z-index: 999;
-    }
+    body { font-family: Arial, sans-serif; margin: 0; background: #f8f6f2; color: #222; }
+    header { background: #c9a368; color: white; padding: 20px 40px; text-align: center; }
+    nav { background: #000; color: white; text-align: center; padding: 10px 0; }
+    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+    section { padding: 40px 20px; max-width: 900px; margin: auto; }
+    h2 { color: #a9864b; border-bottom: 2px solid #a9864b; padding-bottom: 5px; }
+    .paket, .zusatzleistung { background: #fff; border: 1px solid #ddd; padding: 20px; margin: 20px 0; border-radius: 5px; }
+    .btn { display: inline-block; background: #a9864b; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; }
+    .kontaktformular input, .kontaktformular textarea { width: 100%; padding: 10px; margin: 8px 0; border-radius: 4px; border: 1px solid #ccc; }
+    .kontaktformular button { background-color: #000; color: white; padding: 10px 20px; border: none; border-radius: 4px; }
+    footer { background: #222; color: white; text-align: center; padding: 20px; margin-top: 40px; }
   </style>
 </head>
 <body>
 
 <header>
   <h1>Detten’s KFZ-Aufbereitung</h1>
-  <p>Dein Auto. Dein Glanz.</p>
 </header>
 
 <section id="ueberuns">
   <h2>Über uns</h2>
-  <p>Wir stehen für Qualität, Zuverlässigkeit und Leidenschaft in der Fahrzeugpflege. Unser Ziel ist es, jedes Fahrzeug wieder zum Glänzen zu bringen – als wäre es neu.</p>
+  <p>Detten’s KFZ-Aufbereitung aus Emsdetten steht für Qualität, Leidenschaft und einen kompromisslosen Anspruch an Sauberkeit und Glanz. Unser Team kümmert sich mit professionellen Reinigungs- und Pflegeprodukten um jedes Detail deines Fahrzeugs – ob für den Alltag, den Verkauf oder die Leasingrückgabe.</p>
 </section>
 
-<section id="pakete">
-  <h2>Unsere Pakete</h2>
-
-  <div class="paket">
-    <h3>🔹 Paket 1 – Basic Clean</h3>
-    <p><strong>Für leicht verschmutzte Fahrzeuge.</strong></p>
-    <ul>
-      <li>✅ Gründliches Aussaugen</li>
-      <li>✅ Fußmattenreinigung</li>
-      <li>✅ Kunststoffflächen wischen</li>
-      <li>✅ Scheibenreinigung innen</li>
-      <li>✅ Innenraumduft</li>
-    </ul>
-    <p><strong>Preis:</strong> ab 69 € (je nach Fahrzeuggröße)</p>
-    <a href="https://wa.me/4917641557370" class="btn">Jetzt Termin buchen</a>
-  </div>
-
-  <div class="paket">
-    <h3>🔹 Paket 2 – Premium Innenpflege</h3>
-    <p><strong>Für normale bis mittlere Verschmutzung.</strong></p>
-    <ul>
-      <li>✅ Alles aus Paket 1</li>
-      <li>✅ Tornador-Reinigung (Ecken, Lüftung)</li>
-      <li>✅ Nassreinigung der Sitze (Stoff oder Leder)</li>
-      <li>✅ Pflege aller Kunststoffflächen</li>
-    </ul>
-    <p><strong>Preis:</strong> ab 99 €</p>
-    <a href="https://wa.me/4917641557370" class="btn">Jetzt Termin buchen</a>
-  </div> <div class="paket">
-    <h3>🔹 Paket 2 – Premium Innenpflege</h3>
-    <p><strong>Für normale bis mittlere Verschmutzung.</strong></p>
-    <ul>
-        <li>✅ Alles aus Paket 1</li>
-        <li>✅ Tornador-Reinigung (Ecken, Lüftung)</li>
-        <li>✅ Nassreinigung der Sitze (Stoff oder Leder)</li>
-        <li>✅ Pflege aller Kunststoffflächen</li>
-    </ul>
-    <p><strong>Preis:</strong><br>ab 99 €</p>
-    <a href="https://wa.me/4917641557370" class="btn">Jetzt Termin buchen</a>
-</div>
-
-<div class="paket">
-    <h3>🔹 Paket 3 – Komplettaufbereitung</h3>
-    <p><strong>Für starke Verschmutzungen oder zur Fahrzeugaufwertung (z. B. Verkauf, Leasingrückgabe).</strong></p>
-    <ul>
-        <li>✅ Alles aus Paket 2</li>
-        <li>✅ Geruchsneutralisation</li>
-        <li>✅ Kofferraumreinigung</li>
-        <li>✅ Türverkleidungen und Fußraum intensiv</li>
-        <li>✅ Alcantara/Lederpflege je nach Bedarf</li>
-    </ul>
-    <p><strong>Preis:</strong><br>ab 149 €</p>
-    <a href="https://wa.me/4917641557370" class="btn">Jetzt Termin buchen</a>
-</div>
-
-<div class="paket">
-    <h3>🔹 Paket 4 – Komplett & Politur</h3>
-    <p><strong>Das Rundum-sorglos-Paket für den perfekten Glanz.</strong></p>
-    <ul>
-        <li>✅ Alles aus Paket 3</li>
-        <li>✅ Außenreinigung</li>
-        <li>✅ Maschinelle Lackpolitur</li>
-        <li>✅ Lackpflege + Glanzversiegelung</li>
-    </ul>
-    <p><strong>Preis:</strong><br>ab 199 €</p>
-    <a href="https://wa.me/4917641557370" class="btn">Jetzt Termin buchen</a>
-</div>
+<section id="warumwir">
+  <h2>Warum eine Aufbereitung?</h2>
+  <p>Eine professionelle Aufbereitung erhöht nicht nur den Fahrzeugwert, sondern sorgt auch für ein angenehmeres Fahrerlebnis. Besonders bei Leasingrücknahmen kann eine gründliche Pflege unnötige Kosten durch Schäden oder Verschmutzungen vermeiden. Auch beim Verkauf steigert ein sauber aufbereiteter Wagen den Verkaufswert und das Vertrauen potenzieller Käufer.</p>
 </section>
-
-<section id="zusatz">
-  <h2>Zusatzleistungen</h2>
-
-  <div class="zusatzleistung">
-    <h4>🔸 Außenwäsche</h4>
-    <p>✅ Schonende Handwäsche inklusive Felgenreinigung<br><strong>29 €</strong></p>
-  </div>
-
-  <div class="zusatzleistung">
-    <h4>🔸 Polstersitzreinigung</h4>
-    <p>✅ Pro Sitz gründlich gereinigt und gepflegt<br><strong>10 € pro Sitz</strong></p>
-  </div>
-
-  <div class="zusatzleistung">
-    <h4>🔸 Lederreinigung</h4>
-    <p>✅ Sanfte Reinigung und Pflege für Lederflächen<br><strong>15 €</strong></p>
-  </div>
-</section>
-
-<section id="kontakt">
-  <h2>Kontakt für Privat- & Geschäftskunden</h2>
-  <p>📞 WhatsApp: <a href="https://wa.me/4917641557370">+49 176 41557370</a></p>
-  <p>📧 E-Mail:   dettenskfzaufbereitung@gmail.com</p>
-  <p>📍 Kuhlmannstraße 13, 48282 Emsdetten</p>
+<section id="haendler">
+  <h2>Für Autohändler</h2>
+  <p>Sie sind Händler und möchten ein individuelles Angebot für mehrere Fahrzeuge erhalten? Nutzen Sie dafür folgendes Formular:</p>
+  <form action="https://formsubmit.co/dettenskfzaufbereitung@gmail.com" method="POST" class="kontaktformular">
+    <input type="hidden" name="_captcha" value="false">
+    <label for="name">Name</label>
+    <input type="text" name="name" required>
+    <label for="firma">Autohaus / Firma</label>
+    <input type="text" name="firma">
+    <label for="email">E-Mail</label>
+    <input type="email" name="email" required>
+    <label for="nachricht">Nachricht</label>
+    <textarea name="nachricht" rows="5" required placeholder="Welche Fahrzeuge? Umfang? Häufigkeit?"></textarea>
+    <button type="submit">Anfrage senden</button>
+  </form>
 </section>
 
 <section id="impressum">
   <h2>Impressum</h2>
-  <p>Inhaber: Abdurrahman Akay<br>
-  Detten’s KFZ-Aufbereitung<br>
-  Kuhlmannstraße 13<br>
+  <p><strong>Detten’s KFZ-Aufbereitung</strong><br>
+  Kuhlmannstr. 13<br>
   48282 Emsdetten<br>
-  dettenskfzaufbereitung@gmail.com<br>
+  Telefon: 0176 41557370<br>
+  E-Mail: dettenskfzaufbereitung@gmail.com<br>
+  Inhaber: Abdurrahman Akay<br>
   Steuernummer:311/5001/7538</p>
-  <p>Öffnungszeiten:<br>
-  Montag–Freitag: 10:00–18:00<br>
+  <p>Öffnungszeiten und Anschrift:<br>
+48282 Emsdetten, Kuhlmannstr 13<br>
+  Montag–Donnerstag: 10:00–18:00<br>
+  Freitag: 10:00–18:00<br>
   Samstag: 09:00–14:00<br>
   Sonntag: Geschlossen</p>
 </section>
-
-<footer>
-  <p>&copy; 2025 Detten’s KFZ-Aufbereitung – Alle Rechte vorbehalten.</p>
-</footer>
 
 <style>
 .whatsapp-float {
@@ -205,7 +82,6 @@
   z-index: 999;
 }
 </style>
-
 <a href="https://wa.me/4917641557370" class="whatsapp-float">📱 Jetzt per WhatsApp buchen</a>
 
 </body>
