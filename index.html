@@ -9,13 +9,6 @@
 
   <style>
     :root{
-      .brand-logo{
-  height: 44px;
-  width: auto;
-  display: block;
-  border-radius: 12px;
-  box-shadow: 0 14px 40px rgba(0,0,0,0.6);
-}
       --bg:#0b0b0d;
       --bg2:#0f0f12;
       --card:#141416;
@@ -32,6 +25,14 @@
       --accentGlow:rgba(164,22,43,0.28);
 
       --ok:#25D366;
+    }
+
+    .brand-logo{
+      height: 44px;
+      width: auto;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.6);
     }
 
     *{box-sizing:border-box}
@@ -292,6 +293,57 @@
       margin-top: 8px;
     }
 
+    /* Ersatzwagen */
+    .ersatzwagen-section{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+    .ersatzwagen-image img{
+      width:100%;
+      height:100%;
+      min-height: 320px;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.55);
+    }
+    .ersatzwagen-box{
+      height: 100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+    .ersatzwagen-badge{
+      display:inline-flex;
+      width: fit-content;
+      align-items:center;
+      gap:8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(164,22,43,0.45);
+      background: rgba(123,17,33,0.16);
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+    .ersatzwagen-box h2{
+      margin:0 0 10px;
+      font-size: 30px;
+      line-height:1.15;
+    }
+    .ersatzwagen-box p{
+      margin: 0 0 10px;
+    }
+    @media (max-width: 900px){
+      .ersatzwagen-section{
+        grid-template-columns: 1fr;
+      }
+      .ersatzwagen-box h2{
+        font-size: 26px;
+      }
+    }
+
     /* Grid cards */
     .grid{
       display:grid;
@@ -415,8 +467,9 @@
     <div class="topbar">
       <a class="brand" href="#top">
         <img src="80A97248-4D27-40B9-9B2B-C5A532ED4260.png" 
-     alt="Detten's Glanz Logo" 
-     class="brand-logo">
+             alt="Detten's Glanz Logo" 
+             class="brand-logo">
+        <div>
           <b>DETTEN’S-KFZ AUFBEREITUNG</b>
           <small>Premium Fahrzeugaufbereitung in Emsdetten</small>
         </div>
@@ -424,6 +477,7 @@
 
       <nav aria-label="Navigation">
         <a class="pill" href="#ueberuns">Über uns</a>
+        <a class="pill" href="#ersatzwagen">Ersatzwagen</a>
         <a class="pill" href="#galerie">Galerie</a>
         <a class="pill" href="#warum">Warum</a>
         <a class="pill" href="#instagram">Instagram</a>
@@ -468,6 +522,34 @@
         <div class="cta-row" style="margin-top:12px;">
           <a class="btn btn-wa" href="https://wa.me/4917641557370">Jetzt sichern</a>
           <a class="btn" href="#pakete">Alle Pakete</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ERSATZWAGEN -->
+    <section id="ersatzwagen" class="panel ersatzwagen-section">
+      <div class="ersatzwagen-image">
+        <img src="IMG_7869.jpeg" alt="Ersatzwagen Mercedes A-Klasse" loading="lazy">
+      </div>
+
+      <div class="ersatzwagen-box">
+        <div class="ersatzwagen-badge">🚗 Mobil bleiben</div>
+        <h2>Unser Ersatzwagen-Service</h2>
+        <p>
+          Damit Sie während der Aufbereitung flexibel bleiben, bieten wir Ihnen gegen Aufpreis
+          unseren <strong>Ersatzwagen</strong> an.
+        </p>
+        <p>
+          Zusätzlich gilt: Ab einem Auftragswert von <strong>150€</strong> ist unser
+          <strong>Hol- & Bringservice im Umkreis von 15 km kostenlos</strong>.
+        </p>
+        <p>
+          So bleibt Ihr Alltag entspannt, während wir uns professionell um Ihr Fahrzeug kümmern.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn btn-wa" href="https://wa.me/4917641557370">💬 Ersatzwagen anfragen</a>
+          <a class="btn btn-accent" href="#kontakt">Mehr erfahren</a>
         </div>
       </div>
     </section>
@@ -729,27 +811,7 @@
   <a href="https://wa.me/4917641557370" class="whatsapp-float">📱 Jetzt per WhatsApp buchen</a>
 
   <script>
-    // Jahr
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Countdown bis Ende März 2026 (Berlin Zeit ungefähr)
-    const endDate = new Date("2026-03-31T23:59:59+01:00").getTime();
-    const countdownEl = document.getElementById("countdown");
-
-    function tick(){
-      const now = Date.now();
-      const diff = endDate - now;
-      if(diff <= 0){
-        countdownEl.textContent = "⏳ Angebot beendet";
-        return;
-      }
-      const days = Math.floor(diff / (1000*60*60*24));
-      const hrs  = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
-      const mins = Math.floor((diff % (1000*60*60)) / (1000*60));
-      countdownEl.textContent = `⏳ Noch ${days} Tage ${hrs}h ${mins}m`;
-    }
-    tick();
-    setInterval(tick, 1000 * 30);
   </script>
 
 </body>
